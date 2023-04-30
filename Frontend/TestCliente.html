@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+</head>
+<body>
+    <h1>Lista de clientes</h1>
+    <ul id="clientes-list"></ul>
+    <script>
+        fetch('/Clientes')
+            .then(response => response.json())
+            .then(data => {
+                const clientesList = document.getElementById('clientes-list');
+                data.forEach(Clientes => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${Clientes.Nombres} ${Clientes.Apellidos}`;
+                    clientesList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error(error));
+    </script>
+</body>
+
+</html>
