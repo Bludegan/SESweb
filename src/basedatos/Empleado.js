@@ -1,5 +1,5 @@
 const pool = require('../basedatos/database');
-const jwt = require('C:/Users/Carlos/Desktop/SESweb-main/src/services/jwt');
+const jwt = require('jsonwebtoken')
 
 
 const empleadoSchema = {

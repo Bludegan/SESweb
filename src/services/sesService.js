@@ -1,4 +1,4 @@
-const Clientes = require('C:/Users/Carlos/Desktop/SESweb-main/src/basedatos/Cliente');
+const Clientes = require('../basedatos/Cliente');
 
 const getAllClientes = async () => {
   return await Clientes.findAll();
